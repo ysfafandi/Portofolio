@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: oklch(48.8% 0.243 264.376);
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: oklch(37.2% 0.044 257.287);
+  --color-primary-second: oklch(55.4% 0.046 257.417);
+
+  --container-center: auto;
+  --container-padding: 10px;
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1320px;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Buat aturan .container manual agar menggunakan variabel di atas */
+.container {
+  width: 100%;
+  margin-left: var(--container-center);
+  margin-right: var(--container-center);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+@media (min-width: 1320px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.navbar-fixed {
+  @apply fixed z-['9999'] bg-white/70;
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
