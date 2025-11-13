@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html >
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="./src/input.css" rel="stylesheet" />
   </head>
   <title>Portofolio</title>
-  <body class="scroll-smooth">
+  <body >
     <!-- Header Start -->
     <header class="bg-transparent absolute top-0 left-0 w-full flex item-center z-10">
       <div class="container">
@@ -25,22 +25,35 @@
             >
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font-semibold transition duration-500">Home</a>
+                  <a href="#home" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font- dark:text-white transition duration-500">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font-semibold transition duration-500">About</a>
+                  <a href="#about" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font- dark:text-white transition duration-500">About</a>
                 </li>
                 <li class="group">
-                  <a href="#portofolio" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font-semibold transition duration-500">Portofolio</a>
+                  <a href="#portofolio" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font- dark:text-white transition duration-500">Portofolio</a>
                 </li>
                 <li class="group">
-                  <a href="#clients" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font-semibold transition duration-500">Skill</a>
+                  <a href="#clients" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font- dark:text-white transition duration-500">Skill</a>
                 </li>
                 <li class="group">
-                  <a href="#blog" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font-semibold transition duration-500">Blog</a>
+                  <a href="#blog" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font- dark:text-white transition duration-500">Blog</a>
                 </li>
                 <li class="group">
-                  <a href="#contact" class="text-primary-dark py-2 mx-8 flex hover:text-blue hover:font-semibold transition duration-500">Contact</a>
+                  <a href="#contact" class="text-primary-dark py-2 mx-8 flex hover:text-primary hover:font- dark:text-white transition duration-500">Contact</a>
+                </li>
+                <li class="flex items-center">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle">
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -51,11 +64,11 @@
 
     <!-- Header End -->
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-black h-full">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="taxt-base font-semibold text-primary md:text-xl">Hallo semua 🙌, Saya <span class="block font-bold text-primary-dark text-3xl mt-1 lg:text-5xl">Mukhamad Yusuf Afandi</span></h1>
+            <h1 class="taxt-base font-semibold text-primary md:text-xl">Hi, I'm 🙌, <span class="block font-bold text-primary-dark text-3xl mt-1 lg:text-5xl">Mukhamad Yusuf Afandi</span></h1>
             <h2 class="font-medium text-slate-700 text-lg mb-4">UI/UX Designer | Frond end Developer</h2>
             <p class="font-normal text-primary-second leading-relaxed mb-7 lg:text-lg">
               a UI/UX Designer and Front-End Developer from.
@@ -67,7 +80,7 @@
 
             <a href="#" class="text-base font-semibold text-white bg-primary px-5 py-3 rounded-full hover:opacity-80 hover:shadow-lg transition duration-300 ease-initial">Download CV</a>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="w-full self-end px-4 lg:w-1/2 md:scale-110">
             <div class="relative mt-10 lg:mt-9 lg:right-0">
               <img src="../img/yusuf1.png" alt="Yusuf Afandi" class="w-[300px] h-[300px] md:w-[400px] md:h-[400px] max-w-full mx-auto object-cover" />
               <span class="absolute -bottom-5 rotate-2 -z-10 left-1/2 -translate-x-1/2 md:scale-120">
@@ -559,6 +572,11 @@
           </div>
          </footer>
         <!-- Footer End -->
+         <!-- Back to top start -->
+          <a href="#home" id="to-top" class="hidden rotate-x-180 items-center justify-center fixed bottom-4 right-4 w-14 h-14 p-4 bg-primary rounded-full hover:animate-pulse">
+            <img src="../img/icon/right-arrow-white.png" alt="" class=" block rotate-90">
+          </a>
+         <!-- Back to top End -->
     <script src="../dist/script.js"></script>
   </body>
 </html>
